@@ -1,9 +1,4 @@
-
 import json
-
-
-
-
 def add_expense(expense_list):
 
     name_of_expense = input("What expense would you like to add: ")
@@ -16,14 +11,11 @@ def add_expense(expense_list):
     "Category" : category_of_expense
     }
     expense_list.append(expenses)
-
-
 def total_cost(expense_list):
     total =0
     for expense in expense_list:
         total=total + expense["Cost"]
     print(f"Total spent: ${total:.2f} ")
-
 def view_expenses(expense_list):
     for expense in expense_list:
         print(
@@ -34,8 +26,6 @@ def view_expenses(expense_list):
               )
 def menu():
     print("1. View Expenses\n2. Add Expense\n 3. View Total Cost\n 4. Delete Expense\n 5. Quit")
-
-
 
 def delete_expenses(expense_list):
 
